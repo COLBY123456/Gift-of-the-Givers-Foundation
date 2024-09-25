@@ -1,0 +1,42 @@
+@model WebApplication1.Models.Donation
+
+@{
+    ViewData["Title"] = "Make a Donation";
+}
+
+<h1>Make a Donation</h1>
+<p>Complete the form below to contribute resources that will help those in need during times of crisis.</p>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="DonorName"></label>
+        <input asp-for="DonorName" class="form-control" placeholder="Your Name" />
+        <span asp-validation-for="DonorName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ResourceType"></label>
+        <input asp-for="ResourceType" class="form-control" placeholder="Type of Resource (e.g., Food, Clothing)" />
+        <span asp-validation-for="ResourceType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" placeholder="Quantity" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DateDonated"></label>
+        <input asp-for="DateDonated" class="form-control" type="date" />
+        <span asp-validation-for="DateDonated" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DistributionArea"></label>
+        <input asp-for="DistributionArea" class="form-control" placeholder="Distribution Area (e.g., KwaZulu-Natal)" />
+        <span asp-validation-for="DistributionArea" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <input asp-for="Status" class="form-control" placeholder="Status (e.g., Pending, Delivered)" />
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Donation</button>
+</form>

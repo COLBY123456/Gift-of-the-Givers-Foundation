@@ -1,0 +1,40 @@
+@model WebApplication1.Models.Donation
+
+@{
+    ViewData["Title"] = "Donation Details";
+}
+
+<h1>Donation Details</h1>
+<p>Below are the details of the donation.</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>Donor Name</th>
+        <td>@Model.DonorName</td>
+    </tr>
+    <tr>
+        <th>Resource Type</th>
+        <td>@Model.ResourceType</td>
+    </tr>
+    <tr>
+        <th>Quantity</th>
+        <td>@Model.Quantity</td>
+    </tr>
+    <tr>
+        <th>Date Donated</th>
+        <td>@Model.DateDonated.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>Distribution Area</th>
+        <td>@Model.DistributionArea</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td>@Model.Status</td>
+    </tr>
+</table>
+
+<p>
+    <a href="/Donations/Edit/@Model.Id" class="btn btn-warning">Edit</a>
+    <a href="/Donations/Index" class="btn btn-info">Back to List</a>
+</p>

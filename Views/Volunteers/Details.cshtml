@@ -1,0 +1,44 @@
+@model WebApplication1.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Volunteer Details";
+}
+
+<h1>Volunteer Details</h1>
+<p>Below are the details of the volunteer.</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Phone Number</th>
+        <td>@Model.PhoneNumber</td>
+    </tr>
+    <tr>
+        <th>Task Assigned</th>
+        <td>@Model.TaskAssigned</td>
+    </tr>
+    <tr>
+        <th>Availability</th>
+        <td>@Model.Availability</td>
+    </tr>
+    <tr>
+        <th>Experience Level</th>
+        <td>@Model.ExperienceLevel</td>
+    </tr>
+    <tr>
+        <th>Region of Service</th>
+        <td>@Model.RegionOfService</td>
+    </tr>
+</table>
+
+<p>
+    <a href="/Volunteers/Edit/@Model.Id" class="btn btn-warning">Edit</a>
+    <a href="/Volunteers/Index" class="btn btn-info">Back to List</a>
+</p>
